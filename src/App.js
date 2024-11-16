@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { BrowserRouter as Router,Route,Routes} from "react-router-dom";
+import LoginPage from './FirstPage/component/LoginPage';
+import MainPage from './SecondPage/components/MainPage';
+import Calculator from './Calculator/components/Calculator';
+/*
+변수명은 소문자로 시작하고
+함수명은 대문자로 시작,띄어쓰기 대신 대문자 사용
+*/
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path ="/" element={<LoginPage/>}/>
+        <Route path="/main" element={<MainPage/>}/>
+        <Route path="/calculator" element={<Calculator/>}/>
+      </Routes>
+    </Router>
   );
 }
 
