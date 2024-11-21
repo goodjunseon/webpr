@@ -52,6 +52,12 @@ export const BackButton = styled.button`
     align-items: center; /* 버튼 안의 텍스트를 수직 중앙 정렬 */
     justify-content: center; /* 버튼 안의 텍스트를 수평 중앙 정렬 */
     cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: #FBAE3C;
+        color:#001220;
+    }
 `;
 
 export const BodyDiv = styled.div`
